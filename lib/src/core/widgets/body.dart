@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:template/src/data.dart';
+import 'package:skeeper/src/data.dart';
 
 class AppBody extends StatelessWidget {
   final Widget Function(double windowWidth, WindowSize windowSize) builder;

@@ -142,5 +142,4 @@ pubspec.lock
 # FVM
 
 # FVM Version Cache
-.fvm
-
+.fvm/

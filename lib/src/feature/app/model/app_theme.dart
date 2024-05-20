@@ -13,10 +13,15 @@ abstract class _AppThemeStore with Store {
   _AppThemeStore({required this.mode, required this.seed})
       : lightTheme = FlexThemeData.light(
             useMaterial3: true,
-            colorScheme: ColorScheme.fromSeed(seedColor: seed)),
+            colorScheme: ColorScheme.fromSeed(
+                brightness: Brightness.light, seedColor: seed)),
         darkTheme = FlexThemeData.dark(
             useMaterial3: true,
-            colorScheme: ColorScheme.fromSeed(seedColor: seed));
+            subThemesData: FlexSubThemesData(
+              filledButtonRadius: 8,
+            ),
+            colorScheme: ColorScheme.fromSeed(
+                brightness: Brightness.dark, seedColor: seed));
 
   /// The type of theme to use.
   @observable

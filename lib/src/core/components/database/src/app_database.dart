@@ -1,6 +1,6 @@
 import 'package:drift/drift.dart';
-import 'package:template/src/core/components/database/database.dart';
-import 'package:template/src/core/components/database/src/tables/todos_table.dart';
+import 'package:skeeper/src/core/components/database/database.dart';
+import 'package:skeeper/src/core/components/database/src/tables/todos_table.dart';
 
 part 'app_database.g.dart';
 

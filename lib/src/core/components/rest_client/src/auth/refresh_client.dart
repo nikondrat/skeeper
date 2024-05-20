@@ -1,4 +1,4 @@
-import 'package:template/src/core/components/rest_client/rest_client.dart';
+import 'package:skeeper/src/core/components/rest_client/rest_client.dart';
 
 /// The client that refreshes the Auth token using the refresh token.
 ///
