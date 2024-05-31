@@ -17,7 +17,7 @@ abstract class _AppThemeStore with Store {
                 brightness: Brightness.light, seedColor: seed)),
         darkTheme = FlexThemeData.dark(
             useMaterial3: true,
-            subThemesData: FlexSubThemesData(
+            subThemesData: const FlexSubThemesData(
               filledButtonRadius: 8,
             ),
             colorScheme: ColorScheme.fromSeed(

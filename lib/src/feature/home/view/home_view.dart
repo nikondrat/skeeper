@@ -19,7 +19,7 @@ class HomeView extends StatelessWidget {
                 settingsStore.setTheme(
                     AppThemeStore(mode: ThemeMode.light, seed: Colors.red));
               },
-              icon: Icon(Icons.edit)),
+              icon: const Icon(Icons.edit)),
         ),
         body: AppBody(
           builder: (windowWidth, windowSize) {
@@ -28,15 +28,15 @@ class HomeView extends StatelessWidget {
                 SliverPadding(
                     padding: HorizontalSpacing.centered(windowWidth),
                     sliver: PasswordBlock(windowSize: windowSize)),
-                SliverToBoxAdapter(
+                const SliverToBoxAdapter(
                   child: SizedBox(
                     height: 10,
                   ),
                 ),
                 SliverPadding(
                     padding: HorizontalSpacing.centered(windowWidth),
-                    sliver: PreferencesWidget()),
-                SliverToBoxAdapter(
+                    sliver: const PreferencesWidget()),
+                const SliverToBoxAdapter(
                   child: SizedBox(
                     height: 10,
                   ),

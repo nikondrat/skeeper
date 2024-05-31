@@ -8,6 +8,7 @@ base class Dependencies {
     required this.sharedPreferences,
     required this.settingsStore,
     required this.errorTrackingManager,
+    required this.generatorSettings,
   });
 
   /// [SharedPreferences] instance, used to store Key-Value pairs.
@@ -18,6 +19,9 @@ base class Dependencies {
 
   /// [ErrorTrackingManager] instance, used to report errors.
   final ErrorTrackingManager errorTrackingManager;
+
+  /// [GeneratorSettings] instance, used to manage generation
+  final GeneratorSettings generatorSettings;
 }
 
 /// Result of initialization

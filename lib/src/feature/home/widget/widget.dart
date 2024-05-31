@@ -1,2 +1,2 @@
-export 'password_block.dart';
+export 'password_block/password_block.dart';
 export 'preferences.dart';

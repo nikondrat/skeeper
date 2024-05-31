@@ -15,7 +15,7 @@ class PreferencesWidget extends StatelessWidget {
 
     return SliverToBoxAdapter(
         child: Container(
-            padding: BodyPadding.medium(),
+            padding: const BodyPadding.medium(),
             decoration: BoxDecoration(
                 color: scheme.primary, borderRadius: ObjectRadius.medium()),
             child: Column(
@@ -24,8 +24,8 @@ class PreferencesWidget extends StatelessWidget {
                 Observer(builder: (_) {
                   return Slider(
                     max: 128,
-                    value: store.length.toDouble(),
-                    onChanged: (v) => store.setLength(v.toInt()),
+                    value: store.settings.length.toDouble(),
+                    onChanged: (v) => store.settings.setLength(v.toInt()),
                     thumbColor: scheme.onPrimary,
                     activeColor: scheme.onPrimary,
                     inactiveColor: scheme.onPrimaryContainer,
@@ -39,8 +39,8 @@ class PreferencesWidget extends StatelessWidget {
                             .copyWith(color: scheme.onPrimary)),
                     Observer(builder: (context) {
                       return Switch(
-                        value: store.includeNumbers,
-                        onChanged: (_) => store.toggleIncludeNumbers(),
+                        value: store.settings.includeNumbers,
+                        onChanged: (_) => store.settings.toggleIncludeNumbers(),
                         activeTrackColor: scheme.onPrimary,
                         activeColor: scheme.primary,
                       );
@@ -55,8 +55,9 @@ class PreferencesWidget extends StatelessWidget {
                             .copyWith(color: scheme.onPrimary)),
                     Observer(builder: (context) {
                       return Switch(
-                        value: store.includeSpecialChars,
-                        onChanged: (_) => store.toggleIncludeSpecialChars(),
+                        value: store.settings.includeSpecialChars,
+                        onChanged: (_) =>
+                            store.settings.toggleIncludeSpecialChars(),
                         activeTrackColor: scheme.onPrimary,
                         activeColor: scheme.primary,
                       );
@@ -71,8 +72,9 @@ class PreferencesWidget extends StatelessWidget {
                             .copyWith(color: scheme.onPrimary)),
                     Observer(builder: (context) {
                       return Switch(
-                        value: store.includeUppercase,
-                        onChanged: (_) => store.toggleIncludeUppercase(),
+                        value: store.settings.includeUppercase,
+                        onChanged: (_) =>
+                            store.settings.toggleIncludeUppercase(),
                         activeTrackColor: scheme.onPrimary,
                         activeColor: scheme.primary,
                       );
@@ -87,8 +89,9 @@ class PreferencesWidget extends StatelessWidget {
                             .copyWith(color: scheme.onPrimary)),
                     Observer(builder: (context) {
                       return Switch(
-                        value: store.includeLowercase,
-                        onChanged: (_) => store.toggleIncludeLowercase(),
+                        value: store.settings.includeLowercase,
+                        onChanged: (_) =>
+                            store.settings.toggleIncludeLowercase(),
                         activeTrackColor: scheme.onPrimary,
                         activeColor: scheme.primary,
                       );

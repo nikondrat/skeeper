@@ -13,11 +13,13 @@ final class InitializationProcessor {
     final sharedPreferences = await SharedPreferences.getInstance();
     final errorTrackingManager = await _initErrorTrackingManager();
     final settingsStore = await _initSettingsStore(sharedPreferences);
+    final generatorSettings = GeneratorSettings();
 
     return Dependencies(
       sharedPreferences: sharedPreferences,
       settingsStore: settingsStore,
       errorTrackingManager: errorTrackingManager,
+      generatorSettings: generatorSettings,
     );
   }
 

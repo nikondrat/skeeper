@@ -7,6 +7,6 @@ final GlobalKey<NavigatorState> navKey = GlobalKey<NavigatorState>();
 final GoRouter router = GoRouter(navigatorKey: navKey, routes: [
   GoRoute(
     path: '/',
-    builder: (context, state) => HomeView(),
+    builder: (context, state) => const HomeView(),
   )
 ]);
